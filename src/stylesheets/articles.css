@@ -1,0 +1,119 @@
+@import 'reset.css';
+@import 'fonts.css';
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: calc(1vw / 14.4);
+}
+body {
+  font-family: 'PT Root UI', sans-serif;
+  font-size: 16rem;
+}
+
+.O_Header {
+  display: flex;
+  padding: 20rem 30rem;
+  justify-content: space-between;
+  border-bottom: 1rem solid #eee;
+}
+.A_HeaderLogo {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24rem;
+  color: black;
+}
+.A_HeaderLink {
+  text-decoration: none;
+  font-size: 18rem;
+  color: black;
+}
+.A_HeaderLink:hover {
+  text-decoration: underline;
+}
+.C_HeaderLinks {
+  display: flex;
+  gap: 20rem;
+}
+.O_ArticleSection1 {
+  position: relative;
+  height: 780rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.W_ArticlesBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.M_BGCircle {
+  border-radius: 100%;
+  background: linear-gradient(156deg, #8db5fe 12.87%, #3c42ce 91.35%);
+  position: absolute;
+}
+.M_BGCircle:nth-of-type(1) {
+  left: -4%;
+  top: 34%;
+  width: 600rem;
+  height: 600rem;
+}
+.M_BGCircle:nth-of-type(2) {
+  right: -4%;
+  top: 20%;
+  width: 400rem;
+  height: 400rem;
+}
+.A_BGFlower {
+  width: 100%;
+}
+.A_ArticleSwiperEl {
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+.A_ArticleSwiperHeader {
+  font-size: 60rem;
+  line-height: 1.2;
+}
+.C_ArticlesTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+}
+.A_ArticlesTag {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 30rem;
+  padding: 12rem 20rem;
+}
+.W_ArticlesSwiper {
+  width: 60%;
+  border-radius: 40rem;
+  transition: transform 0.8s ease;
+}
+.W_ArticlesSwiper:hover {
+  transform: translateY(-1vw);
+}
+.W_ArticlesSlide {
+  border-radius: 40rem;
+  backdrop-filter: blur(10px);
+  background-color: #dddddd58;
+  border: 1rem solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  padding: 30rem 40rem;
+  color: black;
+  text-decoration: none;
+}
+.swiper {
+  width: 100%;
+  max-height: 40vw;
+}
+.swiper-pagination-bullet-active {
+  background: cornflowerblue;
+}
