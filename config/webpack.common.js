@@ -10,7 +10,8 @@ module.exports = {
   entry: {
     index: './src/javascripts/index.js',
     styleguide: './src/javascripts/styleguide.js',
-    articles: './src/javascripts/articles.js'
+    articles: './src/javascripts/articles.js',
+    theory: './src/javascripts/theory.js'
   },
   output: {
     filename: '[name].js',
