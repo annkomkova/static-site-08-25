@@ -23,7 +23,7 @@ const htmlPages = [
     ['index']
   ),
   createPages('./src/pages/tests/test1.html', './pages/tests/test1.html', [
-    'index'
+    'test1'
   ]),
   createPages('./src/styleguide.html', './styleguide.html', ['styleguide']),
   createPages('./src/pages/theory.html', './pages/theory.html', ['theory'])
