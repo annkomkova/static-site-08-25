@@ -6,30 +6,49 @@
     <title>Тест №1</title>
   </head>
   <body>
-    <a href="../../index.html">На главную</a>
-    <a href="../tests.html">Обратно ко всем тестам</a>
-    <h1>Тест №1: Лекарственные растения</h1>
+    <header class="O_Header">
+      <a class="A_HeaderLogo" href="../index.html">цветочный</a>
+      <nav class="C_HeaderLinks">
+        <a class="A_HeaderLink" href="articles.html">Статьи</a>
+        <a class="A_HeaderLink" href="tests.html">Тесты</a>
+        <a class="A_HeaderLink" href="dictionary.html">Словарь</a>
+      </nav>
+    </header>
 
-    <main class="O_Test">
-      <p class="A_NumberOfQuestion"></p>
-      <h2 class="A_Question"></h2>
-
-      <div class="C_Answers">
-        <div class="M_AnswerMessage">
-          <input type="checkbox" />
-          <label class="A_AnswerText"></label>
-        </div>
-
-        <div class="M_AnswerMessage">
-          <input type="checkbox" />
-          <label class="A_AnswerText"></label>
-        </div>
-
-        <div class="M_AnswerMessage">
-          <input type="checkbox" />
-          <label class="A_AnswerText"></label>
-        </div>
+    <article class="W_ArticlesBG">
+      <div class="M_BGCircle">
+        <img class="A_BGFlower" src="../../images/flower-1.svg" alt="" />
       </div>
-    </main>
+      <div class="M_BGCircle"></div>
+    </article>
+
+    <article class="W_Test">
+      <main class="O_Test">
+        <p class="A_NumberOfQuestion"></p>
+        <h2 class="A_Question"></h2>
+
+        <div class="C_Answers">
+          <div class="M_AnswerMessage">
+            <input class="A_TrueCheckbox" type="checkbox" />
+            <span class="A_FalseCheckbox"></span>
+            <label class="A_AnswerText"></label>
+          </div>
+
+          <div class="M_AnswerMessage">
+            <input class="A_TrueCheckbox" type="checkbox" />
+            <span class="A_FalseCheckbox"></span>
+            <label class="A_AnswerText"></label>
+          </div>
+
+          <div class="M_AnswerMessage">
+            <input class="A_TrueCheckbox" type="checkbox" />
+            <span class="A_FalseCheckbox"></span>
+            <label class="A_AnswerText"></label>
+          </div>
+        </div>
+
+        <h1 class="A_TestName">Лекарственные растения</h1>
+      </main>
+    </article>
   </body>
 </html>

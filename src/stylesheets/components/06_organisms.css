@@ -31,3 +31,10 @@
   justify-content: center;
   align-items: center;
 }
+
+/* ___________________test.html___________________ */
+.O_Test {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+}

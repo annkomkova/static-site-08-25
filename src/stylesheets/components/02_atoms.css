@@ -67,17 +67,58 @@ h4 {
 .A_BGFlower {
   width: 100%;
 }
-.A_ArticleSwiperEl {
-  font-size: 12rem;
-  text-transform: uppercase;
-}
-.A_ArticleSwiperHeader {
-  font-size: 60rem;
-  line-height: 1.2;
-}
 .A_ArticlesTag {
   background-color: cornflowerblue;
   color: white;
   border-radius: 30rem;
   padding: 12rem 20rem;
+}
+.A_ArticleSwiperHeader {
+  font-size: 60rem;
+  line-height: 1.2;
+}
+/* ________________articles & test_______________ */
+
+.A_Question,
+.A_TestResultHeader {
+  font-size: 40rem;
+  line-height: 1.2;
+  margin-top: 50rem;
+}
+.A_ArticleSwiperEl,
+.A_NumberOfQuestion,
+.A_TestName,
+.A_TestResultCount {
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+.A_TestName {
+  margin-top: 50rem;
+}
+.A_AnswerText,
+.A_TestResultParagraph {
+  font-size: 26rem;
+}
+.A_FalseCheckbox {
+  position: absolute;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  border: 1.4rem solid cornflowerblue;
+  border-radius: 8rem;
+  background-color: #eee;
+}
+.A_TrueCheckbox {
+  position: relative;
+  opacity: 0;
+  z-index: 2;
+  margin: 0;
+  width: 20rem;
+  height: 20rem;
+}
+.A_TrueCheckbox:checked + .A_FalseCheckbox {
+  background-color: cornflowerblue;
+}
+.A_TestResultImage {
+  width: 25%;
 }

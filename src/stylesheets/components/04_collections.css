@@ -19,3 +19,10 @@
   flex-wrap: wrap;
   gap: 16rem;
 }
+
+/* ___________________test.html___________________ */
+.C_Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}

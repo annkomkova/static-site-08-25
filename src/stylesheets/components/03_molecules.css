@@ -16,3 +16,16 @@
   width: 400rem;
   height: 400rem;
 }
+/* ________________test_______________ */
+.M_AnswerMessage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.M_TestResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30rem;
+}
