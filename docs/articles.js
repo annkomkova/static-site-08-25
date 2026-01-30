@@ -1,6 +1,4 @@
 /******/ (() => { // webpackBootstrap
-/******/ 	"use strict";
-
 var swiper = new Swiper('.swiper', {
   // Optional parameters
 
