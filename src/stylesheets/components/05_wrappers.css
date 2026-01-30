@@ -1,0 +1,29 @@
+/* ___________________articles.html___________________ */
+.W_ArticlesSwiper {
+  width: 60%;
+  border-radius: 40rem;
+  transition: transform 0.8s ease;
+}
+.W_ArticlesSwiper:hover {
+  transform: translateY(-1vw);
+}
+.W_ArticlesSlide {
+  border-radius: 40rem;
+  backdrop-filter: blur(10px);
+  background-color: #dddddd58;
+  border: 1rem solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  padding: 30rem 40rem;
+  color: black;
+  text-decoration: none;
+}
+.W_ArticlesBG {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}

@@ -11,21 +11,26 @@ function createPages(template, filename, chunks) {
 const htmlPages = [
   createPages('./src/index.html', './index.html', ['index']),
   createPages('./src/pages/articles.html', './pages/articles.html', [
-    'articles'
+    'articles',
+    'allStyles'
   ]),
-  createPages('./src/pages/tests.html', './pages/tests.html', ['index']),
+  createPages('./src/pages/tests.html', './pages/tests.html', ['allStyles']),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
-    'index'
+    'allStyles'
   ]),
   createPages(
     './src/pages/articles/plants.html',
     './pages/articles/plants.html',
-    ['index']
+    ['allStyles']
   ),
   createPages('./src/pages/tests/test1.html', './pages/tests/test1.html', [
-    'test1'
+    'test1',
+    'allStyles'
   ]),
-  createPages('./src/styleguide.html', './styleguide.html', ['styleguide']),
+  createPages('./src/styleguide.html', './styleguide.html', [
+    'styleguide',
+    'allStyles'
+  ]),
   createPages('./src/pages/theory.html', './pages/theory.html', ['theory'])
 ]
 

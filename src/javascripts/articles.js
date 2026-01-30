@@ -1,5 +1,3 @@
-import '../stylesheets/articles.css'
-
 const swiper = new Swiper('.swiper', {
   // Optional parameters
 

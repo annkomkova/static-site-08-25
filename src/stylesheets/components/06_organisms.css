@@ -1,0 +1,33 @@
+/* ___________________styleguide.html___________________ */
+.O_SidebarMenu {
+  width: 20%;
+  padding: 0 30rem;
+  position: relative;
+  height: 100%;
+}
+.O_Sections {
+  width: 60%;
+}
+.O_StyleguideHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 200rem;
+  padding: 20rem;
+  background-color: cornflowerblue;
+  color: white;
+}
+
+/* ___________________articles.html___________________ */
+.O_Header {
+  display: flex;
+  padding: 20rem 30rem;
+  justify-content: space-between;
+  border-bottom: 1rem solid #eee;
+}
+.O_ArticleSection1 {
+  position: relative;
+  height: 780rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

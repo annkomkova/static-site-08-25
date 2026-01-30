@@ -1,16 +1,4 @@
-@import 'reset.css';
-@import 'fonts.css';
-
-* {
-  box-sizing: border-box;
-}
-html {
-  font-size: calc(1vw / 14.4);
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'PT Root UI', sans-serif;
-}
+/* ___________________styleguide.html___________________ */
 .A_MainHeader,
 .A_SectionHeader,
 .A_SectionDopHeader,
@@ -37,14 +25,6 @@ h4 {
   font-size: 24rem;
   line-height: 1.5;
 }
-.O_StyleguideHeader {
-  display: flex;
-  flex-direction: column;
-  gap: 200rem;
-  padding: 20rem;
-  background-color: cornflowerblue;
-  color: white;
-}
 .A_HeaderLink {
   color: #dcdcdc;
   text-decoration: none;
@@ -54,29 +34,6 @@ h4 {
   color: #fff;
   transition: all 0.6s ease;
   text-decoration: underline;
-}
-.S_StyleguedeContent {
-  display: flex;
-  padding: 20rem 0;
-  align-items: flex-start;
-}
-.O_SidebarMenu {
-  width: 20%;
-  padding: 0 30rem;
-  position: relative;
-  height: 100%;
-}
-.O_Sections {
-  width: 60%;
-}
-.C_SidebarMenu {
-  display: flex;
-  flex-direction: column;
-  padding: 10rem;
-  background-color: cornflowerblue;
-  border-radius: 20rem;
-  gap: 10rem;
-  position: fixed;
 }
 .A_SidebarMenuLink {
   background-color: #fff;
@@ -90,4 +47,37 @@ h4 {
   background-color: rgb(142, 177, 240);
   color: white;
   transition: all 0.8s ease;
+}
+
+/* ___________________articles.html___________________ */
+.A_HeaderLogo {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24rem;
+  color: black;
+}
+.A_HeaderLink {
+  text-decoration: none;
+  font-size: 18rem;
+  color: black;
+}
+.A_HeaderLink:hover {
+  text-decoration: underline;
+}
+.A_BGFlower {
+  width: 100%;
+}
+.A_ArticleSwiperEl {
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+.A_ArticleSwiperHeader {
+  font-size: 60rem;
+  line-height: 1.2;
+}
+.A_ArticlesTag {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 30rem;
+  padding: 12rem 20rem;
 }
