@@ -1,0 +1,124 @@
+/* ___________________styleguide.html___________________ */
+.A_MainHeader,
+.A_SectionHeader,
+.A_SectionDopHeader,
+h4 {
+  line-height: 1.2;
+  font-weight: 500;
+}
+.A_MainHeader {
+  font-size: 120rem;
+  font-weight: 700;
+}
+.A_SectionHeader {
+  font-size: 56rem;
+}
+.A_SectionDopHeader {
+  font-size: 48rem;
+}
+h4 {
+  font-size: 36rem;
+}
+.A_Text,
+.A_HeaderLink,
+.A_SidebarMenuLink {
+  font-size: 24rem;
+  line-height: 1.5;
+}
+.A_HeaderLink {
+  color: #dcdcdc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.A_HeaderLink:hover {
+  color: #fff;
+  transition: all 0.6s ease;
+  text-decoration: underline;
+}
+.A_SidebarMenuLink {
+  background-color: #fff;
+  border-radius: 10rem;
+  padding: 6rem 20rem;
+  text-decoration: none;
+  color: rgb(68, 68, 68);
+  transition: all 0.4s ease;
+}
+.A_SidebarMenuLink:hover {
+  background-color: rgb(142, 177, 240);
+  color: white;
+  transition: all 0.8s ease;
+}
+
+/* ___________________articles.html___________________ */
+.A_HeaderLogo {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 24rem;
+  color: black;
+}
+.A_HeaderLink {
+  text-decoration: none;
+  font-size: 18rem;
+  color: black;
+}
+.A_HeaderLink:hover {
+  text-decoration: underline;
+}
+.A_BGFlower {
+  width: 100%;
+}
+.A_ArticlesTag {
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 30rem;
+  padding: 12rem 20rem;
+}
+.A_ArticleSwiperHeader {
+  font-size: 60rem;
+  line-height: 1.2;
+}
+/* ________________articles & test_______________ */
+
+.A_Question,
+.A_TestResultHeader {
+  font-size: 40rem;
+  line-height: 1.2;
+  margin-top: 50rem;
+}
+.A_ArticleSwiperEl,
+.A_NumberOfQuestion,
+.A_TestName,
+.A_TestResultCount {
+  font-size: 12rem;
+  text-transform: uppercase;
+}
+.A_TestName {
+  margin-top: 50rem;
+}
+.A_AnswerText,
+.A_TestResultParagraph {
+  font-size: 26rem;
+}
+.A_FalseCheckbox {
+  position: absolute;
+  left: 0;
+  width: 20rem;
+  height: 20rem;
+  border: 1.4rem solid cornflowerblue;
+  border-radius: 8rem;
+  background-color: #eee;
+}
+.A_TrueCheckbox {
+  position: relative;
+  opacity: 0;
+  z-index: 2;
+  margin: 0;
+  width: 20rem;
+  height: 20rem;
+}
+.A_TrueCheckbox:checked + .A_FalseCheckbox {
+  background-color: cornflowerblue;
+}
+.A_TestResultImage {
+  width: 25%;
+}

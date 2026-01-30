@@ -1,0 +1,31 @@
+/* ___________________articles.html___________________ */
+.M_BGCircle {
+  border-radius: 100%;
+  background: linear-gradient(156deg, #8db5fe 12.87%, #3c42ce 91.35%);
+  position: absolute;
+}
+.M_BGCircle:nth-of-type(1) {
+  left: -4%;
+  top: 34%;
+  width: 600rem;
+  height: 600rem;
+}
+.M_BGCircle:nth-of-type(2) {
+  right: -4%;
+  top: 20%;
+  width: 400rem;
+  height: 400rem;
+}
+/* ________________test_______________ */
+.M_AnswerMessage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10rem;
+}
+.M_TestResult {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30rem;
+}

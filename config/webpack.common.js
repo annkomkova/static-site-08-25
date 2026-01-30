@@ -12,7 +12,8 @@ module.exports = {
     styleguide: './src/javascripts/styleguide.js',
     articles: './src/javascripts/articles.js',
     theory: './src/javascripts/theory.js',
-    test1: './src/javascripts/test1.js'
+    test1: './src/javascripts/test1.js',
+    allStyles: './src/javascripts/allStyles.js'
   },
   output: {
     filename: '[name].js',

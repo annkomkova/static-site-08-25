@@ -1,0 +1,28 @@
+/* ___________________styleguide.html___________________ */
+.C_SidebarMenu {
+  display: flex;
+  flex-direction: column;
+  padding: 10rem;
+  background-color: cornflowerblue;
+  border-radius: 20rem;
+  gap: 10rem;
+  position: fixed;
+}
+
+/* ___________________articles.html___________________ */
+.C_HeaderLinks {
+  display: flex;
+  gap: 20rem;
+}
+.C_ArticlesTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+}
+
+/* ___________________test.html___________________ */
+.C_Answers {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem;
+}

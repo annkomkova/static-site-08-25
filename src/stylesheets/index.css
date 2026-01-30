@@ -1,3 +1,5 @@
+@import 'reset.css';
+@import 'fonts.css';
 * {
   box-sizing: border-box;
 }
@@ -99,4 +101,52 @@ input[name='message']:focus {
 .anim:nth-of-type(3),
 .anim:nth-of-type(2) {
   background-color: #d369d3;
+}
+.text_animation {
+  animation: rotate 10s linear infinite;
+}
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@media screen and (max-width: 600px) {
+  html {
+    font-size: calc(1vw / 3.9);
+  }
+  .zaglushka {
+    flex-direction: column-reverse;
+  }
+  .zaglushka > div {
+    width: 100%;
+  }
+  .text {
+    padding: 20rem;
+  }
+  .zaglushka img {
+    width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+  .anim {
+    width: 180rem;
+    height: 180rem;
+    filter: blur(20rem);
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20rem;
+  }
+  input[name='message'],
+  #my-form-button {
+    width: 100%;
+    font-size: 20rem;
+  }
 }

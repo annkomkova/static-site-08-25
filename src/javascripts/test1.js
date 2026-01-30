@@ -1,6 +1,10 @@
 console.clear()
 import { initTest, chooseAnswer } from './tests.js'
 
+import imgGood from '../images/results/result_good.svg'
+import imgBad from '../images/results/result_bad.svg'
+import imgOK from '../images/results/result_ok.svg'
+
 const stages = [
   {
     question:
@@ -76,5 +80,26 @@ const stages = [
   }
 ]
 
+const results = [
+  {
+    header: 'Отличный результат!',
+    paragraph:
+      'Видно, что вы прекрасно разбираетесь в теме! Проверьте свои знания в других наших тестах',
+    image: `${imgGood}`
+  },
+  {
+    header: 'Хороший результат!',
+    paragraph:
+      'Видно, что вы неплохо знакомы с темой! Проверьте свои знания в других наших тестах',
+    image: `${imgOK}`
+  },
+  {
+    header: 'Кажется, вы новичок в этой теме...',
+    paragraph:
+      'Почитайте наши статьи, чтобы лучше подготовиться, и попробуйте снова проверить свои занния!',
+    image: `${imgBad}`
+  }
+]
+
 initTest(stages)
-chooseAnswer(stages)
+chooseAnswer(stages, results)
