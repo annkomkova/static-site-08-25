@@ -8,50 +8,6 @@ html {
 }
 body {
   font-family: 'PT Root UI', Arial, Helvetica, sans-serif;
-  font-size: 14rem;
-  background-color: #333;
-}
-.zaglushka {
-  background-color: #333;
-  color: #eee;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-}
-.zaglushka h1 {
-  font-size: 36rem;
-  font-weight: 500;
-  line-height: 42rem;
-}
-.zaglushka p {
-  font-size: 24rem;
-  line-height: 30rem;
-}
-.zaglushka > div {
-  width: 48%;
-}
-.zaglushka img {
-  width: 80%;
-  position: relative;
-  z-index: 10;
-}
-.text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20rem 0 0 20rem;
-  position: relative;
-}
-.text_wrapper {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 20rem;
-  background-color: rgba(10, 10, 10, 0.6);
-  padding: 30rem;
-  border-radius: 30rem;
-  backdrop-filter: blur(20rem);
 }
 input[name='message'] {
   width: 66%;
@@ -82,63 +38,12 @@ input[name='message']:focus {
   font-size: 14rem;
   padding-left: 20rem;
 }
-.text_animation {
-  position: absolute;
-  z-index: 0;
-  display: flex;
-  flex-wrap: wrap;
-}
-.anim {
-  width: 330rem;
-  height: 330rem;
-  border-radius: 100%;
-  filter: blur(50rem);
-}
-.anim:nth-of-type(1),
-.anim:nth-of-type(4) {
-  background-color: #699dd3;
-}
-.anim:nth-of-type(3),
-.anim:nth-of-type(2) {
-  background-color: #d369d3;
-}
-.text_animation {
-  animation: rotate 10s linear infinite;
-}
-@keyframes rotate {
-  0% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(180deg) scale(1.5);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
+
 @media screen and (max-width: 600px) {
   html {
     font-size: calc(1vw / 3.9);
   }
-  .zaglushka {
-    flex-direction: column-reverse;
-  }
-  .zaglushka > div {
-    width: 100%;
-  }
-  .text {
-    padding: 20rem;
-  }
-  .zaglushka img {
-    width: 60%;
-    margin: 0 auto;
-    display: block;
-  }
-  .anim {
-    width: 180rem;
-    height: 180rem;
-    filter: blur(20rem);
-  }
+
   form {
     display: flex;
     flex-direction: column;
@@ -148,5 +53,123 @@ input[name='message']:focus {
   #my-form-button {
     width: 100%;
     font-size: 20rem;
+  }
+}
+
+.O_IndexSection {
+  padding: 50rem 100rem;
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+}
+.C_IndexSectionCards {
+  display: flex;
+  justify-content: space-between;
+}
+.C_IndexSectionCardTags {
+  display: flex;
+  gap: 10rem;
+}
+.W_Header {
+  display: flex;
+  gap: 20rem;
+}
+.W_IndexSectionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.W_IndexSectionCard {
+  border-radius: 40rem;
+  backdrop-filter: blur(10px);
+  background-color: #dddddd58;
+  border: 1rem solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 30rem;
+  padding: 30rem 40rem;
+  color: black;
+  text-decoration: none;
+  width: 30%;
+  transition: transform 0.6s ease;
+}
+.W_IndexSectionCard:hover {
+  transform: translateY(10rem);
+  transition: transform 0.6s ease;
+}
+.A_IndexSectionHeader {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 48rem;
+  color: black;
+}
+.A_IndexSectionDescription {
+  text-decoration: none;
+  font-size: 24rem;
+  color: black;
+  margin-top: 20rem;
+}
+.A_IndexSectionCardHeader {
+  font-weight: 500;
+  font-size: 24rem;
+  line-height: 1.2;
+}
+.A_IndexSectionCardDescription {
+  font-size: 18rem;
+  line-height: 1.2;
+}
+.A_IndexSectionCardTag {
+  padding: 6rem 18rem;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 20rem;
+  font-weight: 500;
+}
+.A_SwitchTheme {
+  position: relative;
+  width: 46rem;
+  height: 26rem;
+}
+.Q_SwitchCheckbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.Q_SwitchCircle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  transition: all 0.4s ease;
+  border-radius: 20rem;
+}
+.Q_SwitchCircle::before {
+  position: absolute;
+  content: '';
+  width: 22rem;
+  height: 22rem;
+  left: 2rem;
+  top: 2rem;
+  background-color: white;
+  transition: all 0.4s ease;
+  border-radius: 100%;
+}
+.Q_SwitchCheckbox:checked + .Q_SwitchCircle {
+  background-color: cornflowerblue;
+}
+.Q_SwitchCheckbox:checked + .Q_SwitchCircle::before {
+  transform: translateX(20rem);
+}
+
+.dark {
+  background-color: #333;
+
+  .A_IndexSectionDescription,
+  .A_IndexSectionHeader,
+  .A_HeaderLogo,
+  .A_HeaderLink {
+    color: white;
   }
 }
