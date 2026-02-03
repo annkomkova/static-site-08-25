@@ -29,3 +29,24 @@
   align-items: center;
   gap: 30rem;
 }
+
+/* ___________________index.html & switch___________________ */
+.M_IndexSectionButton {
+  width: 180rem;
+  text-decoration: none;
+  position: relative;
+}
+.M_IndexSectionButton:hover .A_IndexSectionButtonCircle {
+  width: 100%;
+}
+.M_IndexSectionButton:hover .A_IndexSectionButtonText {
+  color: white;
+}
+.M_IndexSectionButton:hover .Q_IndexSectionButtonArrow {
+  background-color: white;
+  width: 30rem;
+  transition: all 0.5s ease-in;
+}
+.M_IndexSectionButton:hover .Q_IndexSectionButtonArrow::before {
+  right: 0rem;
+}

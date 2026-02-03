@@ -17,7 +17,8 @@
 }
 /* ________________articles & test_______________ */
 .W_ArticlesSlide,
-.W_Test {
+.W_Test,
+.W_IndexSectionCard {
   border-radius: 40rem;
   backdrop-filter: blur(10px);
   background-color: #dddddd58;
@@ -32,4 +33,22 @@
 .W_Test {
   width: 880rem;
   margin: 80rem auto 0;
+}
+
+/* ___________________index.html & switch___________________ */
+.W_Header {
+  display: flex;
+  gap: 20rem;
+}
+.W_IndexSectionHeader {
+  display: flex;
+  justify-content: space-between;
+}
+.W_IndexSectionCard {
+  width: 30%;
+  transition: transform 0.6s ease;
+}
+.W_IndexSectionCard:hover {
+  transform: translateY(10rem);
+  transition: transform 0.6s ease;
 }
