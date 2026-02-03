@@ -1,0 +1,53 @@
+/* ___________________index.html & switch___________________ */
+.Q_SwitchCheckbox {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.Q_SwitchCircle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #eee;
+  transition: all 0.4s ease;
+  border-radius: 20rem;
+}
+.Q_SwitchCircle::before {
+  position: absolute;
+  content: '';
+  width: 22rem;
+  height: 22rem;
+  left: 2rem;
+  top: 2rem;
+  background-color: white;
+  transition: all 0.4s ease;
+  border-radius: 100%;
+}
+.Q_SwitchCheckbox:checked + .Q_SwitchCircle {
+  background-color: cornflowerblue;
+}
+.Q_SwitchCheckbox:checked + .Q_SwitchCircle::before {
+  transform: translateX(20rem);
+}
+.Q_IndexSectionButtonArrow {
+  display: block;
+  width: 16rem;
+  height: 2rem;
+  background: none;
+  transition: all 0.1s ease-in;
+  transform: translate(20rem, 17rem);
+}
+.Q_IndexSectionButtonArrow::before {
+  content: '';
+  position: absolute;
+  top: -5rem;
+  right: 14rem;
+  width: 10rem;
+  height: 10rem;
+  border-top: 2rem solid white;
+  border-right: 2rem solid white;
+  transform: rotate(45deg);
+}
