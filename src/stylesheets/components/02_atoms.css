@@ -157,16 +157,19 @@ h4 {
   color: black;
   margin-top: 20rem;
 }
-.A_IndexSectionCardHeader {
+.A_IndexSectionCardHeader,
+.A_ArticleTeaserHeader {
   font-weight: 500;
   font-size: 24rem;
   line-height: 1.2;
 }
-.A_IndexSectionCardDescription {
+.A_IndexSectionCardDescription,
+.A_ArticleTeaserDescription {
   font-size: 18rem;
   line-height: 1.2;
 }
-.A_IndexSectionCardTag {
+.A_IndexSectionCardTag,
+.A_ArticleTeaserTag {
   padding: 6rem 18rem;
   background-color: cornflowerblue;
   color: white;

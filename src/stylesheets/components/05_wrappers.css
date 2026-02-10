@@ -18,7 +18,8 @@
 /* ________________articles & test_______________ */
 .W_ArticlesSlide,
 .W_Test,
-.W_IndexSectionCard {
+.W_IndexSectionCard,
+.W_ArticleTeaser {
   border-radius: 40rem;
   backdrop-filter: blur(10px);
   background-color: #dddddd58;
@@ -33,6 +34,15 @@
 .W_Test {
   width: 880rem;
   margin: 80rem auto 0;
+}
+.W_ArticleTeaser {
+  width: 48.5%;
+  background-repeat: no-repeat;
+  background-size: 26%;
+  background-position: bottom right;
+}
+.W_ArticleTeaser > * {
+  width: 60%;
 }
 
 /* ___________________index.html & switch___________________ */

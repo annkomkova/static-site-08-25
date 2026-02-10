@@ -31,6 +31,14 @@
   justify-content: center;
   align-items: center;
 }
+.O_ArticleTeasers {
+  width: 80%;
+  margin: 30rem auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30rem;
+}
 
 /* ___________________test.html___________________ */
 .O_Test {
