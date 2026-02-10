@@ -37,6 +37,9 @@
 }
 .W_ArticleTeaser {
   width: 48.5%;
+  background-repeat: no-repeat;
+  background-size: 26%;
+  background-position: bottom right;
 }
 .W_ArticleTeaser > * {
   width: 60%;

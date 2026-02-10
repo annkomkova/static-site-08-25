@@ -78,6 +78,7 @@ function createArticleTeaserCard(stroke) {
   const card = document.createElement('a')
   card.href = url
   card.classList.add('W_ArticleTeaser')
+  card.style.backgroundImage = `url(${image})`
 
   const header = document.createElement('h3')
   header.innerText = title
