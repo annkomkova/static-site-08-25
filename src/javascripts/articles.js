@@ -34,11 +34,11 @@ Airtable.configure({
 var base = Airtable.base('appW4mogQFemHeJy8')
 
 let data
-getArticlesTeasers().then((content) => {
-  data = content
+// getArticlesTeasers().then((content) => {
+//   data = content
 
-  updateInfo(data)
-})
+//   updateInfo(data)
+// })
 
 function getArticlesTeasers() {
   return new Promise((resolve, reject) => {

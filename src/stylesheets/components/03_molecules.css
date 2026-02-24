@@ -40,7 +40,7 @@
   width: 100%;
 }
 .M_IndexSectionButton:hover .A_IndexSectionButtonText {
-  color: white;
+  color: #ffffff;
 }
 .M_IndexSectionButton:hover .Q_IndexSectionButtonArrow {
   background-color: white;
@@ -49,4 +49,13 @@
 }
 .M_IndexSectionButton:hover .Q_IndexSectionButtonArrow::before {
   right: 0rem;
+}
+
+/* ___________________tests.html___________________ */
+.M_FilterTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16rem;
+  margin: 30rem auto;
+  width: 80%;
 }
