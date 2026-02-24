@@ -3867,10 +3867,12 @@ airtable__WEBPACK_IMPORTED_MODULE_0___default().configure({
 });
 var base = airtable__WEBPACK_IMPORTED_MODULE_0___default().base('appW4mogQFemHeJy8');
 var data;
-getArticlesTeasers().then(function (content) {
-  data = content;
-  updateInfo(data);
-});
+// getArticlesTeasers().then((content) => {
+//   data = content
+
+//   updateInfo(data)
+// })
+
 function getArticlesTeasers() {
   return new Promise(function (resolve, reject) {
     var content = [];
