@@ -19,7 +19,8 @@
 .W_ArticlesSlide,
 .W_Test,
 .W_IndexSectionCard,
-.W_ArticleTeaser {
+.W_ArticleTeaser,
+.W_TestCard {
   border-radius: 40rem;
   backdrop-filter: blur(10px);
   background-color: #dddddd58;
@@ -61,4 +62,15 @@
 .W_IndexSectionCard:hover {
   transform: translateY(10rem);
   transition: transform 0.6s ease;
+}
+
+/* ___________________tests.html___________________ */
+.W_TestCard {
+  width: 20%;
+  display: flex;
+  min-height: 14vw;
+  background-image: url('../../images/flowers/flower-1.svg');
+  background-repeat: no-repeat;
+  background-size: 7vw;
+  background-position: right bottom;
 }

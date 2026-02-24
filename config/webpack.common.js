@@ -13,7 +13,8 @@ module.exports = {
     articles: './src/javascripts/articles.js',
     theory: './src/javascripts/theory.js',
     test1: './src/javascripts/test1.js',
-    allStyles: './src/javascripts/allStyles.js'
+    allStyles: './src/javascripts/allStyles.js',
+    filterTags: './src/javascripts/filterTags.js'
   },
   output: {
     filename: '[name].js',

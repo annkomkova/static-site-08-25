@@ -158,7 +158,8 @@ h4 {
   margin-top: 20rem;
 }
 .A_IndexSectionCardHeader,
-.A_ArticleTeaserHeader {
+.A_ArticleTeaserHeader,
+.A_TestCardHeader {
   font-weight: 500;
   font-size: 24rem;
   line-height: 1.2;
@@ -180,4 +181,23 @@ h4 {
   position: relative;
   width: 46rem;
   height: 26rem;
+}
+
+.A_FilterTag {
+  border-radius: 20rem;
+  padding: 8rem 18rem;
+  color: cornflowerblue;
+  border: 2rem solid cornflowerblue;
+  background-color: white;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 16rem;
+}
+.A_FilterTag.active {
+  color: white;
+  background-color: cornflowerblue;
+}
+.A_FilterTag:hover {
+  box-shadow: 0 0 6rem 0.5rem cornflowerblue;
 }

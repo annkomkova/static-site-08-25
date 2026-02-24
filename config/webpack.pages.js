@@ -14,7 +14,10 @@ const htmlPages = [
     'articles',
     'allStyles'
   ]),
-  createPages('./src/pages/tests.html', './pages/tests.html', ['allStyles']),
+  createPages('./src/pages/tests.html', './pages/tests.html', [
+    'allStyles',
+    'filterTags'
+  ]),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
     'allStyles'
   ]),
