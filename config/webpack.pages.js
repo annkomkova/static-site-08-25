@@ -19,7 +19,8 @@ const htmlPages = [
     'filterTags'
   ]),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
-    'allStyles'
+    'allStyles',
+    'dictionary'
   ]),
   createPages(
     './src/pages/articles/plants.html',
