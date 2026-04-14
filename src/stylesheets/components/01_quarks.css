@@ -51,3 +51,6 @@
   border-right: 2rem solid white;
   transform: rotate(45deg);
 }
+.Q_Hightlight {
+  background-color: gold;
+}

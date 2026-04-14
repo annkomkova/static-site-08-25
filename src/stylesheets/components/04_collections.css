@@ -37,3 +37,11 @@
   display: flex;
   gap: 10rem;
 }
+.C_Dropdown {
+  position: absolute;
+  width: 300rem;
+  top: 14rem;
+  z-index: 0;
+  padding: 20rem 10rem 10rem;
+  border-radius: 0 0 10rem 10rem;
+}

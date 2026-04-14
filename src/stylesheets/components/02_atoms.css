@@ -201,3 +201,31 @@ h4 {
 .A_FilterTag:hover {
   box-shadow: 0 0 6rem 0.5rem cornflowerblue;
 }
+
+.A_SearchInput {
+  border-radius: 20rem;
+  width: 300rem;
+  height: 34rem;
+  border: 2rem solid #777;
+  padding: 0 18rem;
+  position: relative;
+  z-index: 2;
+}
+.A_SearchInput:focus {
+  outline-color: cornflowerblue;
+  border-color: cornflowerblue;
+}
+.A_SearchButton {
+  height: 34rem;
+  border-radius: 20rem;
+  color: white;
+  border: none;
+  padding: 0 18rem;
+  background-color: cornflowerblue;
+}
+.A_SearchButton[disabled] {
+  background-color: #777;
+}
+.A_SearchResultHeader {
+  font-size: 21rem;
+}
