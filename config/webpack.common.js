@@ -14,7 +14,8 @@ module.exports = {
     theory: './src/javascripts/theory.js',
     test1: './src/javascripts/test1.js',
     allStyles: './src/javascripts/allStyles.js',
-    filterTags: './src/javascripts/filterTags.js'
+    filterTags: './src/javascripts/filterTags.js',
+    searchVanilla: './src/javascripts/search-vanilla.js'
   },
   output: {
     filename: '[name].js',
