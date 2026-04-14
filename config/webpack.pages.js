@@ -9,7 +9,11 @@ function createPages(template, filename, chunks) {
 }
 
 const htmlPages = [
-  createPages('./src/index.html', './index.html', ['index', 'allStyles']),
+  createPages('./src/index.html', './index.html', [
+    'index',
+    'allStyles',
+    'searchVanilla'
+  ]),
   createPages('./src/pages/articles.html', './pages/articles.html', [
     'articles',
     'allStyles'
@@ -34,7 +38,30 @@ const htmlPages = [
     'styleguide',
     'allStyles'
   ]),
-  createPages('./src/pages/theory.html', './pages/theory.html', ['theory'])
+  createPages('./src/pages/theory.html', './pages/theory.html', ['theory']),
+  createPages('./src/pages/articles/aloe.html', './pages/articles/aloe.html', [
+    'allStyles'
+  ]),
+  createPages(
+    './src/pages/articles/cactus.html',
+    './pages/articles/cactus.html',
+    ['allStyles']
+  ),
+  createPages(
+    './src/pages/articles/monstera.html',
+    './pages/articles/monstera.html',
+    ['allStyles']
+  ),
+  createPages(
+    './src/pages/articles/orhidea.html',
+    './pages/articles/orhidea.html',
+    ['allStyles']
+  ),
+  createPages(
+    './src/pages/articles/sansevieria.html',
+    './pages/articles/sansevieria.html',
+    ['allStyles']
+  )
 ]
 
 module.exports = htmlPages
