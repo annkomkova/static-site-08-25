@@ -1,109 +1,78 @@
-initSearch()
+import { articles } from './search-data.js'
 
-function initSearch() {
-  const articles = [
-    {
-      title: 'Монстера',
-      description: 'Тропическое растение с крупными листьями',
-      url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/monstera.html'
-    },
-    {
-      title: 'Кактус',
-      description: 'Растение с иголками вместо листьев',
-      url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/cactus.html'
-    },
-    {
-      title: 'Орхидея',
-      description: 'Цветущее растение, выращиваемое во мху',
-      url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/orhidea.html'
-    },
-    {
-      title: 'Сансевиерия',
-      description: 'Растение-суккулент, которое также называют "щучий хвост"',
-      url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/sansevieria.html'
-    },
-    {
-      title: 'Алоэ',
-      description: 'Лечебное растение-суккулент с сочными листьями',
-      url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/aloe.html'
-    }
-  ]
+initSearch(articles)
 
+function initSearch(articles) {
   const input = document.querySelector('.A_SearchInput')
   const button = document.querySelector('.A_SearchButton')
 
   input.addEventListener('input', () => {
-    handleSearchInput(articles, input, button)
+    hadleSearchInput(articles, input, button)
   })
 
   button.addEventListener('click', () => {
-    handleSearchButton(articles, button, input)
+    hadleSearchClick(articles, input, button)
   })
 }
 
-function handleSearchButton(articles, button, input) {
+function hadleSearchClick(articles, input, button) {
   const value = input.value.toLowerCase()
 
-  const result =
-    articles.find((article) => article.title.toLowerCase().includes(value)) ||
-    articles.find((article) =>
+  const result = articles.find(
+    (article) =>
+      article.title.toLowerCase().includes(value) ||
       article.description.toLowerCase().includes(value)
-    )
+  )
 
   if (result) {
-    window.location.href = result.url
+    // window.location.href = result.url
+    window.location.href = `search.html?q=${encodeURIComponent(value)}`
   }
-}
-
-function handleSearchInput(articles, input, button) {
-  const value = input.value.toLowerCase()
-  const dropdown = document.querySelector('.C_Dropdown')
-
-  if (value.length < 3) {
-    toggleButton(button, false)
-    dropdown.style.display = 'none'
-    return
-  }
-
-  toggleButton(button, true)
-
-  const results =
-    articles.filter((article) => article.title.toLowerCase().includes(value)) ||
-    articles.filter((article) =>
-      article.description.toLowerCase().includes(value)
-    )
-
-  renderDropdown(dropdown, results, value)
 }
 
 function toggleButton(button, isActive) {
   button.disabled = !isActive
-  button.classList.toggle('active')
 }
 
-function renderDropdown(dropdown, results, value) {
-  dropdown.innerHTML = ''
+function hadleSearchInput(articles, input, button) {
+  const value = input.value.toLowerCase()
+  const dropdown = document.querySelector('.C_Dropdown')
 
-  if (results.length == 0) {
+  const results = articles.filter(
+    (article) =>
+      article.title.toLowerCase().includes(value) ||
+      article.description.toLowerCase().includes(value)
+  )
+
+  if (results > 0) {
     dropdown.style.display = 'none'
-    return
   }
 
+  if (value.length < 3) {
+    dropdown.style.display = 'none'
+    toggleButton(button, false)
+  } else {
+    toggleButton(button, true)
+    renderDropdown(results, dropdown, value)
+  }
+}
+
+function renderDropdown(results, dropdown, value) {
+  dropdown.innerHTML = ''
   dropdown.style.display = 'flex'
 
-  results.forEach((article) => {
+  results.forEach((result) => {
     const item = document.createElement('a')
     item.classList.add('M_SearchResult')
-    item.href = article.url
+    item.href = result.url
 
     const header = document.createElement('h5')
     header.classList.add('A_SearchResultHeader')
-    header.innerHTML = article.title
-    // header.innerHTML = `${hightlight(article.title, value)}`
+    header.innerHTML = hightlight(result.title, value)
 
     const description = document.createElement('p')
-    description.classList.add('A_SearchResultDesc')
-    description.innerHTML = article.description
+    description.classList.add('A_SearchResultDescription')
+    description.innerHTML = hightlight(result.description, value)
 
     item.appendChild(header)
     item.appendChild(description)
@@ -112,10 +81,14 @@ function renderDropdown(dropdown, results, value) {
   })
 }
 
-// function hightlight(text, value) {
-//   const regex = new RegExp(`(${value})`, 'gi')
+function hightlight(text, value) {
+  const regex = new RegExp(`${value}`, 'gi')
 
-//   const result = text.replace(regex, '<span class="Q_Hightlight">$1</span')
+  const formatted = text.replace(
+    regex,
+    `<span class="Q_Hightlight">${value}</span>`
+  )
+  console.log(formatted)
 
-//   return result
-// }
+  return formatted
+}

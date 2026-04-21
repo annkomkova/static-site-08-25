@@ -12,18 +12,25 @@ const htmlPages = [
   createPages('./src/index.html', './index.html', [
     'index',
     'allStyles',
-    'searchVanilla'
+    'searchVanilla',
+    'searchData'
   ]),
   createPages('./src/pages/articles.html', './pages/articles.html', [
     'articles',
-    'allStyles'
+    'allStyles',
+    'searchVanilla',
+    'searchData'
   ]),
   createPages('./src/pages/tests.html', './pages/tests.html', [
     'allStyles',
-    'filterTags'
+    'filterTags',
+    'searchVanilla',
+    'searchData'
   ]),
   createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
-    'allStyles'
+    'allStyles',
+    'searchVanilla',
+    'searchData'
   ]),
   createPages(
     './src/pages/articles/plants.html',
@@ -61,7 +68,12 @@ const htmlPages = [
     './src/pages/articles/sansevieria.html',
     './pages/articles/sansevieria.html',
     ['allStyles']
-  )
+  ),
+  createPages('./src/search.html', './search.html', [
+    'allStyles',
+    'searchData',
+    'searchMolule'
+  ])
 ]
 
 module.exports = htmlPages

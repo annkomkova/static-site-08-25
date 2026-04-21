@@ -29,7 +29,8 @@
 }
 
 /* ___________________index.html & switch___________________ */
-.C_IndexSectionCards {
+.C_IndexSectionCards,
+.C_SearchResults {
   display: flex;
   justify-content: space-between;
 }
@@ -37,11 +38,22 @@
   display: flex;
   gap: 10rem;
 }
+
+/* поиск */
 .C_Dropdown {
   position: absolute;
+  z-index: 2;
   width: 300rem;
   top: 14rem;
   z-index: 0;
   padding: 20rem 10rem 10rem;
   border-radius: 0 0 10rem 10rem;
+  flex-direction: column;
+}
+.S_Search .C_Dropdown {
+  width: 100%;
+}
+.C_SearchResults {
+  width: 80%;
+  margin: 0 auto;
 }

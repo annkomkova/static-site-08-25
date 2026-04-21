@@ -15,7 +15,9 @@ module.exports = {
     test1: './src/javascripts/test1.js',
     allStyles: './src/javascripts/allStyles.js',
     filterTags: './src/javascripts/filterTags.js',
-    searchVanilla: './src/javascripts/search-vanilla.js'
+    searchVanilla: './src/javascripts/search-vanilla.js',
+    searchMolule: './src/javascripts/search-vanilla-module.js',
+    searchData: './src/javascripts/search-data.js'
   },
   output: {
     filename: '[name].js',
