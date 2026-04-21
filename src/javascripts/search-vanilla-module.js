@@ -45,7 +45,7 @@ function renderResults(query, results, articles) {
   list.forEach((item) => {
     const card = document.createElement('a')
     card.classList.add('W_IndexSectionCard')
-    card.href = item.src
+    card.href = item.url
 
     const header = document.createElement('h3')
     header.classList.add('A_IndexSectionCardHeader')
