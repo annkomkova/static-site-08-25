@@ -12,7 +12,8 @@ const htmlPages = [
   createPages('./src/index.html', './index.html', [
     'index',
     'allStyles',
-    'searchVanilla'
+    'searchVanilla',
+    'searchData'
   ]),
   createPages('./src/pages/articles.html', './pages/articles.html', [
     'articles',

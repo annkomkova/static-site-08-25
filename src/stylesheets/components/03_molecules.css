@@ -65,6 +65,8 @@
   text-decoration: none;
   width: 100%;
   padding: 10rem;
+  position: relative;
+  z-index: 4;
 }
 .M_SearchResult:hover {
   color: white;
