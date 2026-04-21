@@ -1,3 +1,7 @@
+import { articles } from './search-data.js'
+
+initSearchPage(articles)
+
 function initSearchPage(articles) {
   const input = document.querySelector('.A_SearchInput')
   const button = document.querySelector('.A_SearchButton')
@@ -77,5 +81,3 @@ function updateURL(value) {
   const url = `search.html?q=${encodeURIComponent(value)}`
   history.replaceState(null, '', url)
 }
-
-export { initSearchPage }

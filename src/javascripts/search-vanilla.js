@@ -1,3 +1,7 @@
+import { articles } from './search-data.js'
+
+initSearch(articles)
+
 function initSearch(articles) {
   const input = document.querySelector('.A_SearchInput')
   const button = document.querySelector('.A_SearchButton')
@@ -88,5 +92,3 @@ function hightlight(text, value) {
 
   return formatted
 }
-
-export { initSearch }

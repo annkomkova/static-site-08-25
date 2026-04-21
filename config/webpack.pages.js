@@ -71,7 +71,6 @@ const htmlPages = [
   ),
   createPages('./src/search.html', './search.html', [
     'allStyles',
-    'searchVanilla',
     'searchData',
     'searchMolule'
   ])

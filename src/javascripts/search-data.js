@@ -1,7 +1,4 @@
-import { initSearch } from './search-vanilla.js'
-import { initSearchPage } from './search-vanilla-module.js'
-
-const articles = [
+export const articles = [
   {
     title: 'Монстера',
     description: 'Тропическое растение с крупными листьями',
@@ -29,6 +26,3 @@ const articles = [
     url: 'https://annkomkova.github.io/static-site-08-25/pages/articles/aloe.html'
   }
 ]
-
-initSearch(articles)
-initSearchPage(articles)
