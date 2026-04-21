@@ -1,5 +1,4 @@
 function initSearch(articles) {
-
   const input = document.querySelector('.A_SearchInput')
   const button = document.querySelector('.A_SearchButton')
 
@@ -22,8 +21,8 @@ function hadleSearchClick(articles, input, button) {
   )
 
   if (result) {
-    window.location.href = result.url
-    // window.location.href = `search.html?q=${encodeURIComponent(value)}`
+    // window.location.href = result.url
+    window.location.href = `search.html?q=${encodeURIComponent(value)}`
   }
 }
 
@@ -88,41 +87,6 @@ function hightlight(text, value) {
   console.log(formatted)
 
   return formatted
-}
-///////////////
-function isSearchPage() {
-  return new URLSearchParams(location.search).has('q')
-}
-
-function updateURL(query) {
-  const url = `${location.pathname}?q=${encodeURIComponent(query)}`
-  history.replaceState(null, '', url)
-}
-
-function renderResults(query) {
-  resultsContainer.innerHTML = ''
-
-  if (query.length < 3) return
-
-  const list = filter(query)
-
-  if (!list.length) {
-    resultsContainer.innerHTML = '<p>Ничего не найдено</p>'
-    return
-  }
-
-  list.forEach((item) => {
-    const card = document.createElement('a')
-    card.href = item.url
-    card.className = 'card'
-
-    card.innerHTML = `
-        <h3>${highlight(item.title, query)}</h3>
-        <p>${highlight(item.description, query)}</p>
-      `
-
-    resultsContainer.appendChild(card)
-  })
 }
 
 export { initSearch }

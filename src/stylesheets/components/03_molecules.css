@@ -35,6 +35,7 @@
   width: 180rem;
   text-decoration: none;
   position: relative;
+  z-index: 1;
 }
 .M_IndexSectionButton:hover .A_IndexSectionButtonCircle {
   width: 100%;

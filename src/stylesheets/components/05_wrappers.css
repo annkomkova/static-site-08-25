@@ -78,3 +78,8 @@
 .W_SearchContainer {
   position: relative;
 }
+.S_Search .W_SearchContainer {
+  width: 40%;
+  display: flex;
+  gap: 10rem;
+}

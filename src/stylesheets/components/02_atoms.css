@@ -202,6 +202,10 @@ h4 {
   box-shadow: 0 0 6rem 0.5rem cornflowerblue;
 }
 
+/* поиск */
+.S_Search .A_SearchInput {
+  width: 100%;
+}
 .A_SearchInput {
   border-radius: 20rem;
   width: 300rem;
@@ -228,4 +232,8 @@ h4 {
 }
 .A_SearchResultHeader {
   font-size: 21rem;
+}
+.A_SearchHeader {
+  font-weight: bold;
+  font-size: 42rem;
 }
