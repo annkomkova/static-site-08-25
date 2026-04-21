@@ -80,70 +80,65 @@ var articles = [{
 var __webpack_exports__ = {};
 /* harmony import */ var _search_data_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(306);
 
-initSearch(_search_data_js__WEBPACK_IMPORTED_MODULE_0__/* .articles */ .O);
-function initSearch(articles) {
+initSearchPage(_search_data_js__WEBPACK_IMPORTED_MODULE_0__/* .articles */ .O);
+function initSearchPage(articles) {
   var input = document.querySelector('.A_SearchInput');
   var button = document.querySelector('.A_SearchButton');
+  var results = document.querySelector('.C_SearchResults');
+  var params = new URLSearchParams(window.location.search);
+  var query = params.get('q') || '';
+  input.value = query;
+
+  //вызвать рендер карточек результатов
+  renderResults(query, results, articles);
+
+  //события инпута
   input.addEventListener('input', function () {
-    hadleSearchInput(articles, input, button);
+    var value = input.value.toLowerCase();
+    updateURL(value);
+    renderResults(value, results, articles);
   });
+
+  //события клика
   button.addEventListener('click', function () {
-    hadleSearchClick(articles, input, button);
+    var value = input.value.toLowerCase();
+    updateURL(value);
+    renderResults(value, results, articles);
   });
 }
-function hadleSearchClick(articles, input, button) {
-  var value = input.value.toLowerCase();
-  var result = articles.find(function (article) {
-    return article.title.toLowerCase().includes(value) || article.description.toLowerCase().includes(value);
+function renderResults(query, results, articles) {
+  results.innerHTML = '';
+  if (query.length < 3) return;
+  var list = articles.filter(function (article) {
+    return article.title.toLowerCase().includes(query) || article.description.toLowerCase().includes(query);
   });
-  if (result) {
-    // window.location.href = result.url
-    window.location.href = "search.html?q=".concat(encodeURIComponent(value));
+  if (list.length == 0) {
+    results.innerHTML = '<p>Ничего не найдено</p>';
+    return;
   }
-}
-function toggleButton(button, isActive) {
-  button.disabled = !isActive;
-}
-function hadleSearchInput(articles, input, button) {
-  var value = input.value.toLowerCase();
-  var dropdown = document.querySelector('.C_Dropdown');
-  var results = articles.filter(function (article) {
-    return article.title.toLowerCase().includes(value) || article.description.toLowerCase().includes(value);
-  });
-  if (results > 0) {
-    dropdown.style.display = 'none';
-  }
-  if (value.length < 3) {
-    dropdown.style.display = 'none';
-    toggleButton(button, false);
-  } else {
-    toggleButton(button, true);
-    renderDropdown(results, dropdown, value);
-  }
-}
-function renderDropdown(results, dropdown, value) {
-  dropdown.innerHTML = '';
-  dropdown.style.display = 'flex';
-  results.forEach(function (result) {
-    var item = document.createElement('a');
-    item.classList.add('M_SearchResult');
-    item.href = result.url;
-    var header = document.createElement('h5');
-    header.classList.add('A_SearchResultHeader');
-    header.innerHTML = hightlight(result.title, value);
+  list.forEach(function (item) {
+    var card = document.createElement('a');
+    card.classList.add('W_IndexSectionCard');
+    card.href = item.url;
+    var header = document.createElement('h3');
+    header.classList.add('A_IndexSectionCardHeader');
+    header.innerHTML = hightlight(item.title, query);
     var description = document.createElement('p');
-    description.classList.add('A_SearchResultDescription');
-    description.innerHTML = hightlight(result.description, value);
-    item.appendChild(header);
-    item.appendChild(description);
-    dropdown.appendChild(item);
+    description.classList.add('A_IndexSectionCardDescription');
+    description.innerHTML = hightlight(item.description, query);
+    card.appendChild(header);
+    card.appendChild(description);
+    results.appendChild(card);
   });
 }
 function hightlight(text, value) {
   var regex = new RegExp("".concat(value), 'gi');
   var formatted = text.replace(regex, "<span class=\"Q_Hightlight\">".concat(value, "</span>"));
-  console.log(formatted);
   return formatted;
+}
+function updateURL(value) {
+  var url = "search.html?q=".concat(encodeURIComponent(value));
+  history.replaceState(null, '', url);
 }
 /******/ })()
 ;
