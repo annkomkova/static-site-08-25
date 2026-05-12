@@ -17,7 +17,8 @@ module.exports = {
     filterTags: './src/javascripts/filterTags.js',
     searchVanilla: './src/javascripts/search-vanilla.js',
     searchMolule: './src/javascripts/search-vanilla-module.js',
-    searchData: './src/javascripts/search-data.js'
+    searchData: './src/javascripts/search-data.js',
+    reactBasics: './src/javascripts/reactBasics.jsx'
   },
   output: {
     filename: '[name].js',

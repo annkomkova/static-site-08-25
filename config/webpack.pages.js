@@ -73,6 +73,10 @@ const htmlPages = [
     'allStyles',
     'searchData',
     'searchMolule'
+  ]),
+  createPages('./src/pages/react-basics.html', './pages/react-basics.html', [
+    'allStyles',
+    'reactBasics'
   ])
 ]
 
