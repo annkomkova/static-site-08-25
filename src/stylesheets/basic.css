@@ -16,3 +16,6 @@ body {
 .swiper-pagination-bullet-active {
   background: cornflowerblue;
 }
+#app {
+  font-size: 60rem;
+}
