@@ -15,19 +15,19 @@ const htmlPages = [
     'searchVanilla',
     'searchData'
   ]),
-  createPages('./src/pages/articles.html', './pages/articles.html', [
+  createPages('./src/pages/articles.ejs', './pages/articles.html', [
     'articles',
     'allStyles',
     'searchVanilla',
     'searchData'
   ]),
-  createPages('./src/pages/tests.html', './pages/tests.html', [
+  createPages('./src/pages/tests.ejs', './pages/tests.html', [
     'allStyles',
     'filterTags',
     'searchVanilla',
     'searchData'
   ]),
-  createPages('./src/pages/dictionary.html', './pages/dictionary.html', [
+  createPages('./src/pages/dictionary.ejs', './pages/dictionary.html', [
     'allStyles',
     'searchVanilla',
     'searchData'

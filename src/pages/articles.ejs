@@ -1,3 +1,4 @@
+<% const {menubar} = require('../javascripts/menubar.js')%>
 <!doctype html>
 <html lang="ru">
   <head>
@@ -14,11 +15,12 @@
   <body class="S_ArticlesPage">
     <header class="O_Header">
       <a class="A_HeaderLogo" href="../index.html">цветочный</a>
-      <nav class="C_HeaderLinks">
+      <!-- <nav class="C_HeaderLinks">
         <a class="A_HeaderLink" href="articles.html">Статьи</a>
         <a class="A_HeaderLink" href="tests.html">Тесты</a>
         <a class="A_HeaderLink" href="dictionary.html">Словарь</a>
-      </nav>
+      </nav> -->
+      <%= menubar %>
       <div class="W_SearchContainer">
           <input
             type="text"
