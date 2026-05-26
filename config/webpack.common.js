@@ -2,9 +2,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const htmlPages = require('./webpack.pages.js')
+const SitemapPlugin = require('sitemap-webpack-plugin').default
 
 const webpack = require('webpack')
 const path = require('path')
+
+const paths = [
+  'static-site-08-25/index.html',
+  'static-site-08-25/search.html',
+  'static-site-08-25/styleguide.html',
+  'static-site-08-25/pages/articles.html',
+  'static-site-08-25/pages/tests.html',
+  'static-site-08-25/pages/dictionary.html',
+  'static-site-08-25/pages/react-basics.html',
+  'static-site-08-25/pages/theory.html',
+  'static-site-08-25/pages/tests/test1.html',
+  'static-site-08-25/pages/articles/plants.html',
+  'static-site-08-25/pages/articles/aloe.html',
+  'static-site-08-25/pages/articles/cactus.html',
+  'static-site-08-25/pages/articles/monstera.html',
+  'static-site-08-25/pages/articles/orhidea.html',
+  'static-site-08-25/pages/articles/sansevieria.html'
+]
 
 module.exports = {
   entry: {
@@ -61,7 +80,14 @@ module.exports = {
       }
     ]
   },
-  plugins: [new MiniCssExtractPlugin(), ...htmlPages],
+  plugins: [
+    new MiniCssExtractPlugin(),
+    ...htmlPages,
+    new SitemapPlugin({
+      base: 'https://annkomkova.github.io/',
+      paths
+    })
+  ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]
   },
