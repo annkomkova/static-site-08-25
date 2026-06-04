@@ -4,6 +4,7 @@ const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const htmlPages = require('./webpack.pages.js')
 const SitemapPlugin = require('sitemap-webpack-plugin').default
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 const webpack = require('webpack')
 const path = require('path')
@@ -96,6 +97,23 @@ module.exports = {
         template_filename: '*'
       }
     ])
+    // new HtmlWebpackPartialsPlugin([
+    //   {
+    //     path: path.join(__dirname, '../src/partials/footer.html'),
+    //     priority: 'replace',
+    //     location: 'footerPart',
+    //     template_filename: '*'
+    //   }
+    // ])
+    //// для подключения доменного имени (проверьте, что создали папку share внутри src и положили CNAME)
+    // new CopyWebpackPlugin({
+    //   patterns: [
+    //     {
+    //       from: path.resolve(__dirname, '../src/share/CNAME'),
+    //       to: path.resolve(__dirname, '../docs')
+    //     }
+    //   ]
+    // })
   ],
   optimization: {
     minimizer: [new CssMinimizerPlugin()]
