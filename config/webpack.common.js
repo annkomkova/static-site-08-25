@@ -39,7 +39,8 @@ module.exports = {
     searchVanilla: './src/javascripts/search-vanilla.js',
     searchMolule: './src/javascripts/search-vanilla-module.js',
     searchData: './src/javascripts/search-data.js',
-    reactBasics: './src/javascripts/reactBasics.jsx'
+    reactBasics: './src/javascripts/reactBasics.jsx',
+    searchReact: './src/javascripts/search-react.jsx'
   },
   output: {
     filename: '[name].js',
